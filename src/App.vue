@@ -5,7 +5,7 @@
 
 <template>
 <div class="min-h-screen bg-gray-100">
-   <div class="container ms-auto py-8">
+   <div class="container ms-auto py-8 align-middle">
     <RouterView />
     <articleList />
    </div>
