@@ -2,12 +2,12 @@
     <div>
         <div>
             <button @click="showModal = true" class="bg-blue-500 text-white rounded-md py-2 px-4 hover:bg-blue-600">
-              Add Task
+              Add Article
             </button>
         <div v-if="showModal" class="fixed inset-0 flex items-center justify-center z-50">
         <div class="bg-white rounded-lg p-8 shadow-lg">
           <span class="close" @click="showModal = false">&times;</span>
-          <h2 class="text-xl font-bold mb-4">Add Task</h2>
+          <h2 class="text-xl font-bold mb-4">Add Article</h2>
           <input v-model="newTask.title" type="text" placeholder="Task Title" class="border border-gray-300 rounded-md p-2 mb-2 w-full" />
           <input v-model="newTask.description" type="text" placeholder="Task Description" class="border border-gray-300 rounded-md p-2 mb-2 w-full" />
           <div class="mb-4">
