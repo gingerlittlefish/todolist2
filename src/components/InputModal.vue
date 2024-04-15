@@ -10,6 +10,7 @@
           <h2 class="text-xl font-bold mb-4">Add Article</h2>
           <input v-model="newTask.title" type="text" placeholder="Task Title" class="border border-gray-300 rounded-md p-2 mb-2 w-full" />
           <input v-model="newTask.description" type="text" placeholder="Task Description" class="border border-gray-300 rounded-md p-2 mb-2 w-full" />
+          <input v-model="newTask.articleId" type="text" placeholder="Task ArticleId" class="border border-gray-300 rounded-md p-2 mb-2 w-full">
           <div class="mb-4">
             <label class="block font-bold mb-1">Status:</label>
             <select v-model="newTask.status" class="border border-gray-300 rounded-md p-2 w-full">

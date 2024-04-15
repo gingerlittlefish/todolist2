@@ -4,7 +4,7 @@
 </script>
 
 <template>
-<div class="min-h-screen bg-gray-100">
+<div class="min-h-screen bg-gray-100 align-middle">
    <div class="container ms-auto py-8 align-middle">
     <RouterView />
     <articleList />
