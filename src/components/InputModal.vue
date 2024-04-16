@@ -1,5 +1,4 @@
 <template>
-    <div>
         <div>
             <button @click="showModal = true" class="bg-blue-500 text-white rounded-md py-2 px-4 hover:bg-blue-600">
               Add Article
@@ -9,8 +8,8 @@
           <span class="close" @click="showModal = false">&times;</span>
           <h2 class="text-xl font-bold mb-4">Add Article</h2>
           <input v-model="newTask.title" type="text" placeholder="Task Title" class="border border-gray-300 rounded-md p-2 mb-2 w-full" />
-          <input v-model="newTask.description" type="text" placeholder="Task Description" class="border border-gray-300 rounded-md p-2 mb-2 w-full" />
-          <input v-model="newTask.articleId" type="text" placeholder="Task ArticleId" class="border border-gray-300 rounded-md p-2 mb-2 w-full">
+          <textarea v-model="newTask.description" type="text" placeholder="Task Description" class="border border-gray-300 rounded-md p-2 mb-2 w-full" />
+          <input v-model="newTask.articleId" type="text" placeholder="Task ArticleId" class="border border-gray-300 rounded-md p-2 mb-2 w-full" />
           <div class="mb-4">
             <label class="block font-bold mb-1">Status:</label>
             <select v-model="newTask.status" class="border border-gray-300 rounded-md p-2 w-full">
@@ -46,7 +45,6 @@
           </tr>
         </tbody>
       </table>
-    </div>
     </div>
   </template>
   

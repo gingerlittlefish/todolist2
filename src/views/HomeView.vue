@@ -6,6 +6,5 @@ import articleList from '@/components/articleList.vue';
 <template>
   <main>
     <InputModal />
-    <articleList />
   </main>
 </template>

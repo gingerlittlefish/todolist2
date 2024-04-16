@@ -5,7 +5,21 @@
 
 <template>
 <div class="min-h-screen bg-gray-100 align-middle">
-   <div class="container ms-auto py-8 align-middle">
+   <div class="ms-auto py-8 align-middle">
+    <nav class="mb-8">
+        <ul class="flex">
+          <li class="mr-4">
+            <router-link to="/" class="px-4 py-2 rounded-md bg-white shadow-md hover:bg-gray-100">
+              Todo List
+            </router-link>
+          </li>
+          <li>
+            <router-link to="/articles" class="px-4 py-2 rounded-md bg-white shadow-md hover:bg-gray-100">
+              文章列表
+            </router-link>
+          </li>
+        </ul>
+      </nav>
     <RouterView />
    </div>
 </div>

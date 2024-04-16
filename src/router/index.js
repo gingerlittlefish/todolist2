@@ -20,8 +20,8 @@ const router = createRouter({
       path: '/article/:id',
       name: 'articleDetail',
       component: articleDetail
-    }
-  
+    },
+    
   ]
 })
 
