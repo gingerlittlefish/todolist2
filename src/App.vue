@@ -9,12 +9,12 @@
     <nav class="mb-8">
         <ul class="flex">
           <li class="mr-4">
-            <router-link to="/" class="px-4 py-2 rounded-md bg-white shadow-md hover:bg-gray-100">
+            <router-link to="/" class="px-4 py-2 rounded-md bg-white shadow-md hover:bg-gray-100 focus:outline-none focus:ring focus:ring-violet-300">
               Todo List
             </router-link>
           </li>
           <li>
-            <router-link to="/articles" class="px-4 py-2 rounded-md bg-white shadow-md hover:bg-gray-100">
+            <router-link to="/articles" class="px-4 py-2 rounded-md bg-white shadow-md hover:bg-gray-100 focus:outline-none focus:ring focus:ring-violet-300">
               文章列表
             </router-link>
           </li>
