@@ -1,11 +1,17 @@
 <script setup>
  import { RouterView } from 'vue-router'
- import { ref } from 'vue'
- import { useRoute } from 'vue-router'
+ import { ref,watch } from 'vue'
+ import { useRoute, useRouter } from 'vue-router'
 
 const route = useRoute()
+const router = useRouter()
 const currentPath = ref(route.path)
-
+watch(
+  () => router.currentRoute.value.path,
+  (newPath) => {
+    currentPath.value = newPath
+  }
+)
 </script>
 
 <template>
@@ -14,18 +20,12 @@ const currentPath = ref(route.path)
     <nav class="mb-8">
         <ul class="flex">
           <li class="mr-4">
-            <router-link to="/" :class="[
-                'px-4 py-2 rounded-md bg-white shadow-md hover:bg-blue-300',
-                currentPath === '/' ? 'bg-blue-400 text-white' : ''
-              ]">
+            <router-link to="/" :class="['px-4 py-2 rounded-md bg-white text-black shadow-md hover:bg-blue-300',currentPath === '/' ? 'bg-blue-400 text-white' : '']">
               Todo List
             </router-link>
           </li>
           <li>
-            <router-link to="/articles" :class="[
-                'px-4 py-2 rounded-md bg-white shadow-md hover:bg-blue-300',
-                currentPath === '/articles' ? 'bg-blue-400 text-white' : ''
-              ]">
+            <router-link to="/articles" :class="['px-4 py-2 rounded-md bg-white text-black shadow-md hover:bg-blue-300',currentPath === '/articles' ? 'bg-blue-400 text-white' : '']">
               文章列表
             </router-link>
           </li>
