@@ -21,7 +21,6 @@ const router = createRouter({
       name: 'articleDetail',
       component: articleDetail
     },
-    
   ]
 })
 

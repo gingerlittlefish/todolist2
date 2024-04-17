@@ -37,12 +37,12 @@ import dayjs from 'dayjs'
     
     const previousPage = () => {
          currentPage.value--
-         router.push({ path: '/', query: { page: currentPage.value }})
+         router.push({ path: '/articles', query: { page: currentPage.value }})
     }
 
     const nextPage = () => {
         currentPage.value += 1
-        router.push({ path: '/', query: { page: currentPage.value }})
+        router.push({ path: '/articles', query: { page: currentPage.value }})
     }
 
 </script>

@@ -1,6 +1,6 @@
 <template>
         <div>
-            <button @click="showModal = true" class="bg-blue-500 text-white rounded-md py-2 px-4 hover:bg-blue-600">
+            <button @click="showModal = true" class="bg-blue-500 text-white rounded-md py-2 px-4 my-4 hover:bg-blue-600">
               Add Article
             </button>
         <div v-if="showModal" class="fixed inset-0 flex items-center justify-center z-50">
