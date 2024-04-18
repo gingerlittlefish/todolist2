@@ -51,7 +51,7 @@ import dayjs from 'dayjs'
 <div class="mt-8">
     <ul class="bg-white rounded-lg shadow-lg divide-y divide-gray-200">
      <li v-for="(item,index) in article" class="px-4 py-3">
-        <router-link :to="`/article/${item.id}`" class="block text-lg font-semibold text-blue-600 hover:text-blue-800">
+        <router-link :to="`/article/${item.id}`" class="block text-lg font-semibold text-blue-600 hover:bg-blue-100">
           <h3>{{ item.title }}</h3>
         </router-link>
         <div class="mt-1 text-sm text-gray-600">
