@@ -23,12 +23,12 @@
       <table class="w-full border-collapse">
         <thead>
           <tr class="bg-gray-200">
-            <th class="py-2 px-4 text-left">Title</th>
-            <th class="py-2 px-4 text-left">Description</th>
-            <th class="py-2 px-4 text-left">Status</th>
-            <th class="py-2 px-4 text-left">Created Date</th>
-            <th class="py-2 px-4 text-left">Last Modified</th>
-            <th class="py-2 px-4 text-left">Actions</th>
+            <th class="py-2 px-4 text-left text-black">Title</th>
+            <th class="py-2 px-4 text-left text-black">Description</th>
+            <th class="py-2 px-4 text-left text-black">Status</th>
+            <th class="py-2 px-4 text-left text-black">Created Date</th>
+            <th class="py-2 px-4 text-left text-black">Last Modified</th>
+            <th class="py-2 px-4 text-left text-black">Actions</th>
           </tr>
         </thead>
         <tbody>
