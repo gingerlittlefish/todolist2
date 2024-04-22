@@ -1,27 +1,23 @@
 <template>
     <div>
       <Tabs v-model="selectedTab" :tabs="tabs" />
-      <component :is="currentComponent" />
+       <slot :name="selectedTab"></slot>
     </div>
   </template>
   
   <script setup>
   import { ref, computed } from 'vue'
   import Tabs from './Tabs.vue'
-  import TodoList from './InputModal.vue'
-  import articleList from './articleList.vue';
+
   
-  const selectedTab = ref(1)
+  const props = defineProps({
+    tabs: {
+        type: Array,
+        required: true
+    }
+  })
+
+  const selectedTab = ref(props.tabs[0].id)
   
-  const tabs = [
-    { id: 1, label: 'Todo List' },
-    { id: 2, label: '文章列表' }
-  ]
   
-  const components = {
-    1: TodoList,
-    2: articleList
-  }
-  
-  const currentComponent = computed(() => components[selectedTab.value])
   </script>

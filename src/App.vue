@@ -3,6 +3,13 @@
  import { ref,watch } from 'vue'
  import { useRoute, useRouter } from 'vue-router'
  import TabManager from './components/TabManager.vue';
+ import InputModal from './components/InputModal.vue';
+ import articleList from './components/articleList.vue';
+
+ const tabs = [
+  { id: 1, label: 'Todo List' },
+  { id: 2, label: '文章列表' }
+]
 
 const route = useRoute()
 const router = useRouter()
@@ -32,7 +39,14 @@ watch(
           </li>
         </ul>
       </nav> -->
-     <TabManager />
+     <TabManager :tabs="tabs">
+      <template v-slot:1>
+          <InputModal />
+        </template>
+        <template v-slot:2>
+          <articleList />
+        </template>
+     </TabManager>
    </div>
 </div>
   
