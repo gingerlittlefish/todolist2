@@ -1,12 +1,16 @@
 <template>
     <div>
-      <Tabs v-model="selectedTab" :tabs="tabs" />
+      <slot :tabs="tabs">
+           <Tabs />
+      </slot>
+      <div class="mt-4">
        <slot :name="selectedTab"></slot>
+      </div>  
     </div>
   </template>
   
   <script setup>
-  import { ref, computed } from 'vue'
+  import { ref, provide } from 'vue'
   import Tabs from './Tabs.vue'
 
   
@@ -18,6 +22,11 @@
   })
 
   const selectedTab = ref(props.tabs[0].id)
+
+  const selectTab = (tabId) => {
+    selectedTab.value = tabId
+  }
   
-  
+  provide('selectedTab' , selectedTab)
+  provide('selectTab' , selectTab)
   </script>

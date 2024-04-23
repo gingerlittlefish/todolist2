@@ -2,6 +2,7 @@
  import { RouterView } from 'vue-router'
  import { ref,watch } from 'vue'
  import { useRoute, useRouter } from 'vue-router'
+ import Tabs from './components/Tabs.vue';
  import TabManager from './components/TabManager.vue';
  import InputModal from './components/InputModal.vue';
  import articleList from './components/articleList.vue';
@@ -40,12 +41,15 @@ watch(
         </ul>
       </nav> -->
      <TabManager :tabs="tabs">
+      <template v-slot:default="{ tabs }">
+          <Tabs :tabs="tabs" />
+      </template>
       <template v-slot:1>
           <InputModal />
-        </template>
-        <template v-slot:2>
+      </template>
+      <template v-slot:2>
           <articleList />
-        </template>
+      </template>
      </TabManager>
    </div>
 </div>
