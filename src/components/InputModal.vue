@@ -73,7 +73,9 @@
   }
   
   const editTask = (index) => {
-    
+    const oldTask = {
+      lastModified: new Date().toISOString()
+    }
   }
   
   const deleteTask = (index) => {
