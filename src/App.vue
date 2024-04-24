@@ -27,13 +27,13 @@ watch(
 <div class="min-h-screen bg-gray-100 justify-center">
    <div class="ms-auto py-8 justify-center">                                                                                                                                                                                                                                                                        
      <TabManager :tabs="tabs">
-      <template v-slot:default="{ tabs }">
+      <template #default="{ tabs }">
           <Tabs :tabs="tabs" />
       </template>
-      <template v-slot:1>
+      <template #1>
           <InputModal />
       </template>
-      <template v-slot:2>
+      <template #2>
           <ArticleList />
       </template>
      </TabManager>
