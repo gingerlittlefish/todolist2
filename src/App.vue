@@ -5,7 +5,7 @@
  import Tabs from './components/Tabs.vue';
  import TabManager from './components/TabManager.vue';
  import InputModal from './components/InputModal.vue';
- import articleList from './components/articleList.vue';
+ import ArticleList from './components/ArticleList.vue'
 
  const tabs = [
   { id: 1, label: 'Todo List' },
@@ -25,21 +25,7 @@ watch(
 
 <template>
 <div class="min-h-screen bg-gray-100 justify-center">
-   <div class="ms-auto py-8 justify-center">
-    <!-- <nav class="mb-8">
-        <ul class="flex">
-          <li class="mr-4">
-            <router-link to="/" :class="['px-4 py-2 rounded-md  text-black shadow-md hover:bg-blue-300',currentPath === '/' ? 'bg-blue-400 text-white' : 'bg-white']">
-              Todo List
-            </router-link>
-          </li>
-          <li>
-            <router-link to="/articles" :class="['px-4 py-2 rounded-md  text-black shadow-md hover:bg-blue-300',currentPath === '/articles' ? 'bg-blue-400 text-white' : 'bg-white']">
-              文章列表
-            </router-link>
-          </li>
-        </ul>
-      </nav> -->
+   <div class="ms-auto py-8 justify-center">                                                                                                                                                                                                                                                                        
      <TabManager :tabs="tabs">
       <template v-slot:default="{ tabs }">
           <Tabs :tabs="tabs" />
@@ -48,7 +34,7 @@ watch(
           <InputModal />
       </template>
       <template v-slot:2>
-          <articleList />
+          <ArticleList />
       </template>
      </TabManager>
    </div>

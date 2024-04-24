@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import articleList from '@/components/articleList.vue'
-import articleDetail from '../views/articleDetail.vue'
+import ArticleListVue from '../components/ArticleList.vue'
+import ArticleDetailsVue from '../views/ArticleDetails.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,12 +14,12 @@ const router = createRouter({
     {
       path: '/articles',
       name: 'articleList',
-      component: articleList,
+      component: ArticleListVue,
     },
     {
       path: '/article/:id',
       name: 'articleDetail',
-      component: articleDetail,
+      component: ArticleDetailsVue,
     },
   ],
 })
