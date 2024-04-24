@@ -1,8 +1,8 @@
 <template>
     <div>
-      <slot :tabs="tabs">
+         <slot :tabs="tabs">
            <Tabs />
-      </slot>
+         </slot>
       <div class="mt-4">
        <slot :name="selectedTab"></slot>
       </div>  
