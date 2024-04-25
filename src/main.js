@@ -13,7 +13,7 @@ app.use(createPinia())
 app.use(router)
 
 app.mount('#app')
-
+// 每次翻页让页面回滚至顶部
 router.afterEach((to,from,next) => {
  window.scrollTo(0,0);
 })

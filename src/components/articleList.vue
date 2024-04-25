@@ -36,7 +36,7 @@ import dayjs from 'dayjs'
     }
     
     const previousPage = () => {
-         currentPage.value--
+         currentPage.value -=1
          router.push({ path: '/articles', query: { page: currentPage.value }})
     }
 

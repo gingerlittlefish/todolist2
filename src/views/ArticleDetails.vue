@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { useRoute } from 'vue-router'
+import { useRoute } from 'vue-router'
 import axios from 'axios'
 import { ref, onMounted } from 'vue'
 import dayjs from 'dayjs'
