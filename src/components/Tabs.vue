@@ -11,6 +11,7 @@
     </nav>
   </template>
   
+
   <script setup>
   import { inject } from 'vue'
   

@@ -4,23 +4,27 @@
  import { useRoute, useRouter } from 'vue-router'
  import Tabs from './components/Tabs.vue';
  import TabManager from './components/TabManager.vue';
+ import ArticleList from './components/ArticleList.vue';
  import InputModal from './components/InputModal.vue';
- import ArticleList from './components/ArticleList.vue'
+
+ const route = useRoute()
+ const router = useRouter()
+ const currentPath = ref(route.path)
+  watch(
+   () => router.currentRoute.value.path,
+   (newPath) => {
+    currentPath.value = newPath
+   }
+  )
 
  const tabs = [
-  { id: 1, label: 'Todo List' },
-  { id: 2, label: '文章列表' }
-]
+   { id: 1, label: 'Todo List' },
+   { id: 2, label: '文章列表' }
+  ]
 
-const route = useRoute()
-const router = useRouter()
-const currentPath = ref(route.path)
-watch(
-  () => router.currentRoute.value.path,
-  (newPath) => {
-    currentPath.value = newPath
-  }
-)
+ const selectedTab = ref(1)
+
+  
 </script>
 
 <template>
