@@ -34,12 +34,12 @@
       <template #default="{ tabs }">
           <Tabs :tabs="tabs" />
       </template>
-      <template #1>
+      <template v-slot:tab-content-1>
           <InputModal />
-      </template>
-      <template #2>
+        </template>
+        <template v-slot:tab-content-2>
           <ArticleList />
-      </template>
+        </template>
      </TabManager>
    </div>
 </div>

@@ -4,7 +4,8 @@
            <Tabs />
          </slot>
       <div class="mt-4">
-       <slot :name="selectedTab"></slot>
+        <slot name="tab-content-1"></slot>
+        <slot name="tab-content-2"></slot>
       </div>  
     </div>
   </template>
