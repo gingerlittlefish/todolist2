@@ -6,6 +6,7 @@
  import TabManager from './components/TabManager.vue';
  import ArticleList from './components/ArticleList.vue';
  import InputModal from './components/InputModal.vue';
+ import ArticleDetails from './views/ArticleDetails.vue'
 
  const route = useRoute()
  const router = useRouter()
@@ -39,6 +40,12 @@
         </template>
         <template v-slot:tab-content-2>
           <ArticleList />
+        </template>
+        <template v-slot:tab-content-3>
+          <router-view v-slot="{ Component }">
+            <component :is="Component" v-if="$route.name !== 'ArticleDetails'" />
+            <article-details v-else :key="$route.params.id" />
+          </router-view>
         </template>
      </TabManager>
    </div>
