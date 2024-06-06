@@ -1,6 +1,6 @@
 <script setup>
  import { RouterView } from 'vue-router'
- import { ref,watch } from 'vue'
+ import { ref,watch,inject } from 'vue'
  import { useRoute, useRouter } from 'vue-router'
  import Tabs from './components/Tabs.vue';
  import TabManager from './components/TabManager.vue';
@@ -24,7 +24,7 @@
 
  const selectedTab = ref(1)
 
-  
+
 </script>
 
 <template>
